@@ -1,0 +1,12 @@
+% Define a software agent
+agent(X) :- can_perform_action(X).
+
+% Define the actions that the agent can perform
+can_perform_action(X) :- can_search(X).
+can_perform_action(X) :- can_sort(X).
+can_perform_action(X) :- can_analyze(X).
+
+% Define the specific actions that the agent can perform
+can_search(search_agent).
+can_sort(sort_agent).
+can_analyze(analyze_agent).
