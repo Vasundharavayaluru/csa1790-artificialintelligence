@@ -1,0 +1,12 @@
+% Define the book and its attributes
+book(title, author, publisher, ISBN, genre).
+
+% Define the frames for the book's attributes
+frame(title, "The Great Gatsby").
+frame(author, "F. Scott Fitzgerald").
+frame(publisher, "Charles Scribner's Sons").
+frame(ISBN, "9780743273565").
+frame(genre, "Novel").
+
+% Define rules to retrieve information about the book
+book_info(Attribute, Value) :- book(attribute, Value), frame(attribute, Value).
